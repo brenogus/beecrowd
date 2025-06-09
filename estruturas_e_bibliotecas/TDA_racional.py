@@ -1,9 +1,16 @@
+# -*- coding: utf-8 -*-
+
+'''
+Escreva a sua solução aqui
+Code your solution here
+Escriba su solución aquí
+'''
+
 from fractions import Fraction
 
 tamanho_testes = int(input())
 expressoes = []
 
-# Laço que lê as expressões e separa as informações que serão usadas
 for i in range(tamanho_testes):
     frase = input()
     tokens = frase.split()  # Ex: ['1', '/', '2', '+', '3', '/', '4']
@@ -14,8 +21,6 @@ for i in range(tamanho_testes):
     d2 = int(tokens[6])
     expressoes.append((n1, d1, operador, n2, d2))
 
-# Laço for que para cada token lido em cada frase enviada trata esses tokens para gerar os numeradores e denominadores
-# que serão usados como base para imprimir o texto na tela
 for n1, d1, operador, n2, d2 in expressoes:
     match operador:
         case '+':
